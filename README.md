@@ -13,6 +13,8 @@ The pre-trained model is fine-tuned with the REINFORCE algorithm. The terminal r
 
 An LSTM actor–critic model is trained using Proximal Policy Optimization. Clipped policy updates stabilize training, and a value network provides lower-variance advantage estimates. Although PPO achieves the highest average QED, it tends to collapse to a narrow set of molecular scaffolds, demonstrating a classical mode-collapse phenomenon.
 
+!(figures/QED-PPO.png)
+
 As result indicated, reinforcement learning substantially improves the drug-likeness (QED) of generated molecules. Both REINFORCE and PPO preserve chemical validity due to the strong SMILES prior. PPO's optimization strength comes at the cost of diversity, collapsing onto a limited scaffold family. REINFORCE maintains broader exploration while achieving nearly comparable QED performance. These observations underscore the exploration–exploitation tradeoff in molecular reinforcement learning and the importance of explicit diversity regularization when using strong policy optimizers such as PPO.
 
 This is a final project for Stanford CS238, Autumn 2025. Full version of project report and discussion could be found in the course website: https://aa228.stanford.edu/old-projects/.
